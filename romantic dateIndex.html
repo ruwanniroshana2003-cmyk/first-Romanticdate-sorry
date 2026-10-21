@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Special Romantic Date Plan 💕</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- JS Confetti Library for Page 7 celebration -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #ffe6ea 0%, #ffc3a0 50%, #ffafbd 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .romantic-font {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        /* Glassmorphic card styling */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.90);
+            backdrop-filter: blur(16px);
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 20px 50px rgba(236, 72, 153, 0.25);
+        }
+
+        /* Floating elements animation */
+        .floating-element {
+            position: fixed;
+            pointer-events: none;
+            animation: floatAnim 6s infinite ease-in-out;
+            z-index: 1;
+            opacity: 0.7;
+        }
+
+        @keyframes floatAnim {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(12deg); }
+        }
+
+        /* Page transition effects */
+        .page-step {
+            display: none;
+            animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .page-step.active {
+            display: block;
+        }
+
+        @keyframes slideUpFade {
+            from { opacity: 0; transform: translateY(20px) scale(0.97); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* Option cards interactive styling */
+        .option-card {
+            border: 2px solid #fce7f3;
+            transition: all 0.25s ease;
+        }
+        .option-card:hover {
+            border-color: #ec4899;
+            background-color: #fff0f5;
+            transform: translateY(-2px);
+        }
+        .option-card.selected {
+            border-color: #db2777;
+            background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+            box-shadow: 0 8px 20px rgba(219, 39, 119, 0.25);
+            transform: scale(1.02);
+        }
+
+        /* Floating Butterflies animation */
+        .butterfly {
+            position: fixed;
+            font-size: 1.6rem;
+            animation: fly 14s infinite linear;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        @keyframes fly {
+            0% { transform: translate(-10vw, 100vh) rotate(0deg); opacity: 0.9; }
+            50% { transform: translate(50vw, 45vh) rotate(25deg); }
+            100% { transform: translate(110vw, -10vh) rotate(-15deg); opacity: 0; }
+        }
+
+        /* Glowing button effect */
+        .heart-btn {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .heart-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(236, 72, 153, 0.4);
+        }
+        .heart-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center p-4 sm:p-6 relative">
+
+    <!-- Floating Background Butterflies & Flowers -->
+    <div class="butterfly" style="left: 5%; animation-delay: 0s;"><i class="fa-solid fa-butterfly text-pink-400"></i></div>
+    <div class="butterfly" style="left: 40%; animation-delay: 5s;"><i class="fa-solid fa-butterfly text-rose-400"></i></div>
+    <div class="butterfly" style="left: 75%; animation-delay: 9s;"><i class="fa-solid fa-butterfly text-purple-400"></i></div>
+
+    <div class="floating-element top-8 left-6 text-4xl text-rose-300"><i class="fa-solid fa-spa"></i></div>
+    <div class="floating-element bottom-10 right-8 text-5xl text-pink-300"><i class="fa-solid fa-heart"></i></div>
+    <div class="floating-element top-1/4 right-10 text-3xl text-rose-400"><i class="fa-solid fa-rose"></i></div>
+    <div class="floating-element bottom-1/3 left-8 text-4xl text-pink-400"><i class="fa-solid fa-heart"></i></div>
+
+    <!-- Main Container Card -->
+    <main class="w-full max-w-lg glass-card rounded-3xl p-6 sm:p-8 relative z-10 shadow-2xl my-6">
+        
+        <!-- Header Banner -->
+        <div class="text-center mb-6">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-pink-100 text-pink-500 mb-2 shadow-inner">
+                <i class="fa-solid fa-heart-circle-bolt text-3xl animate-pulse"></i>
+            </div>
+            <h1 class="text-3xl sm:text-4xl font-bold text-pink-600 tracking-wide romantic-font">
+                Our Special Date Plan
+            </h1>
+            <div class="w-28 h-1 bg-gradient-to-r from-pink-300 via-rose-500 to-pink-300 mx-auto mt-2 rounded-full"></div>
+        </div>
+
+        <!-- ================= PAGE 1 ================= -->
+        <section id="page1" class="page-step active">
+            <div class="text-center py-4">
+                <div class="text-5xl mb-4 animate-bounce">🌸✨</div>
+                <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-2">
+                    ඔයා මේක දිගටම කන්ටිනියු කරන් යනවද නැද්ද? 💕
+                </h2>
+                <p class="text-gray-500 text-sm mb-8">Do you want to continue planning our special date?</p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="goToPage(2)" class="heart-btn w-full sm:w-1/2 py-3.5 px-6 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold text-lg shadow-lg">
+                        <i class="fa-solid fa-heart mr-2"></i> ඔව් (Yes)
+                    </button>
+                    <button onclick="showPage('pageNo')" class="heart-btn w-full sm:w-1/2 py-3.5 px-6 rounded-2xl bg-gray-200 text-gray-700 hover:bg-gray-300 font-bold text-lg">
+                        <i class="fa-solid fa-xmark mr-2"></i> නැත (No)
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- NO Page Exit Screen -->
+        <section id="pageNo" class="page-step">
+            <div class="text-center py-8">
+                <div class="text-6xl mb-4">🌸😊</div>
+                <h2 class="text-xl sm:text-2xl font-bold text-pink-600 mb-4">
+                    තෑන්ක් යූ අපි සමඟ සම්බන්ධ වුණාට!
+                </h2>
+                <p class="text-gray-700 font-semibold text-lg mb-6">
+                    Have a wonderful day ahead! ✨🌸
+                </p>
+                <button onclick="goToPage(1)" class="heart-btn py-2.5 px-6 rounded-xl bg-pink-500 text-white font-bold text-sm">
+                    <i class="fa-solid fa-arrow-left mr-2"></i> මුල සිට ආරම්භ කරන්න
+                </button>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 2 ================= -->
+        <section id="page2" class="page-step">
+            <div class="text-center mb-6">
+                <h2 class="text-lg sm:text-xl font-bold text-gray-800">
+                    අපි නෙක්ස්ට් වීක් වල මොකද කරන්නේ? 💭
+                </h2>
+                <p class="text-xs text-pink-500 font-semibold">Pick what you want to do next week!</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 mb-6" id="p2Options">
+                <div onclick="selectOption(this, 2, 'Movie 🎬')" class="option-card p-3.5 rounded-2xl bg-white/80 flex flex-col items-center justify-center cursor-pointer text-center">
+                    <span class="text-3xl mb-1">🎬</span>
+                    <span class="font-bold text-gray-700 text-sm">Movie</span>
+                </div>
+                <div onclick="selectOption(this, 2, 'Love 💕')" class="option-card p-3.5 rounded-2xl bg-white/80 flex flex-col items-center justify-center cursor-pointer text-center">
+                    <span class="text-3xl mb-1">💕</span>
+                    <span class="font-bold text-gray-700 text-sm">Love</span>
+                </div>
+                <div onclick="selectOption(this, 2, 'OGF 🛍️')" class="option-card p-3.5 rounded-2xl bg-white/80 flex flex-col items-center justify-center cursor-pointer text-center">
+                    <span class="text-3xl mb-1">🛍️</span>
+                    <span class="font-bold text-gray-700 text-sm">OGF Mall</span>
+                </div>
+                <div onclick="selectOption(this, 2, 'Shopping 🛍️')" class="option-card p-3.5 rounded-2xl bg-white/80 flex flex-col items-center justify-center cursor-pointer text-center">
+                    <span class="text-3xl mb-1">👗</span>
+                    <span class="font-bold text-gray-700 text-sm">Shopping</span>
+                </div>
+                <div onclick="selectOption(this, 2, 'Date / Eat 🍕')" class="option-card p-3.5 rounded-2xl bg-white/80 flex flex-col items-center justify-center cursor-pointer text-center">
+                    <span class="text-3xl mb-1">🍕</span>
+                    <span class="font-bold text-gray-700 text-sm">Date / Eat</span>
+                </div>
+                <div onclick="selectOption(this, 2, 'Surprise 🎁')" class="option-card p-3.5 rounded-2xl bg-white/80 flex flex-col items-center justify-center cursor-pointer text-center border-pink-300">
+                    <span class="text-3xl mb-1">🎁</span>
+                    <span class="font-bold text-pink-600 text-sm">Surprise</span>
+                </div>
+            </div>
+
+            <button onclick="validateAndGo(2, 3)" class="heart-btn w-full py-3.5 rounded-2xl bg-gradient-to-r from-pink
